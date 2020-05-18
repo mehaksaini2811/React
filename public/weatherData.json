@@ -1,0 +1,25 @@
+{
+  "coord": { "lon": 75.65, "lat": 32.28 },
+  "weather": [
+    { "id": 800, "main": "Clear", "description": "clear sky", "icon": "01d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 311.01,
+    "feels_like": 306.55,
+    "temp_min": 311.01,
+    "temp_max": 311.01,
+    "pressure": 1006,
+    "humidity": 10,
+    "sea_level": 1006,
+    "grnd_level": 970
+  },
+  "wind": { "speed": 3.75, "deg": 276 },
+  "clouds": { "all": 4 },
+  "dt": 1589793766,
+  "sys": { "country": "IN", "sunrise": 1589759859, "sunset": 1589809816 },
+  "timezone": 19800,
+  "id": 1260137,
+  "name": "Pathānkot",
+  "cod": 200
+}

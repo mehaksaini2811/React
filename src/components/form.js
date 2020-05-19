@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Form = () => {
+const Form = props => {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
-  var apiUrl =
-    "api.openweathermap.org/data/2.5/weather?q=seattle&appid=9a86288d70cb4dccd3ee569d6921af39";
-  const [url, setUrl] = useState(apiUrl);
-  const [responseObj, setResponse] = useState("");
 
   const handleChange = event => {
     let fieldName = event.target.name;
@@ -18,20 +14,15 @@ const Form = () => {
       setCountry(fieldValue);
     }
   };
-  const getWeather = async e => {
-    e.preventDefault();
-    await axios
-      .get("./weatherData.json/")
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(() => {
-        alert("error");
-      });
-  };
+
   return (
     <div>
-      <form onSubmit={getWeather}>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          props.loadWeather();
+        }}
+      >
         <input
           type="text"
           placeholder="city"
@@ -46,7 +37,6 @@ const Form = () => {
         />
         <button>Get Weather</button>
       </form>
-      <p>{JSON.stringify(responseObj)}</p>
     </div>
   );
 };

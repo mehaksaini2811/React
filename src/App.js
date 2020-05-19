@@ -1,7 +1,7 @@
 import React from "react";
-import Form from "./components/form";
 import Weather from "./components/weather";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 export default class App extends React.Component {
   render() {
     return (
